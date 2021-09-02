@@ -62,11 +62,11 @@ class RestaurantTest {
 
     //<<<<<<<<<<<<<<<<<<<<<<TOTAL ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>
     @Test
-    public void total_order_value_should_be_equal_to_total_price_of_items_selected(){
+    public void total_order_value_should_be_equal_to_total_price_of_items_selected() throws itemNotFoundException {
         List<String> itemNames = new ArrayList<String>();
         itemNames.add("Sweet corn soup");
         itemNames.add("Vegetable lasagne");
-        assertNotNull(restaurant.totalOrderValue(itemNames));
+        assertEquals(388,restaurant.totalOrderValue(itemNames));
     }
     //<<<<<<<<<<<<<<<<<<<<<<TOTAL ORDER VALUE>>>>>>>>>>>>>>>>>>>>>>>>>
 }
